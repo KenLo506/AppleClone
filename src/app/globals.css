@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 29, 29, 31;
+  --background-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer components {
+  .nav-link {
+    @apply hover:text-gray-400 transition-colors duration-300;
+  }
+  
+  .hero-section {
+    @apply relative h-[580px] flex flex-col items-center justify-center bg-cover bg-center text-center;
+  }
+
+  .product-link {
+    @apply text-apple-blue hover:underline transition-all duration-300;
+  }
+
+  .grid-section {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-3 px-3 max-w-[1440px] mx-auto mt-3;
+  }
+
+  .promo-tile {
+    @apply relative h-[580px] flex flex-col items-center justify-center bg-cover bg-center text-center;
+  }
+} 
